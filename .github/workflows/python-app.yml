@@ -26,6 +26,10 @@ jobs:
         python -m pip install --upgrade pip setuptools
         pip install -r requirements.txt
 
-    # Step 4: Run the build script
+    # Step 4: Set execute permission for the build script
+    - name: Set execute permission for build.sh
+      run: chmod +x build.sh
+
+    # Step 5: Run the build script
     - name: Build Application
       run: ./build.sh
